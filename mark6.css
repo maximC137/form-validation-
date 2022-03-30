@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   }
+   header {
+    padding: 20px 15px;
+    background-color: #272727;
+   }
+   h1 {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+   }
+   
+   form#register {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 15px;
+    
+    .input-group {
+     width: calc(50%);
+     min-width: 200px;
+     padding: 15px;
+     
+     &.full {
+      width: 100%;
+     }
+     
+     .clear {
+      clear: both;
+     }
+     
+     label, input {
+       display: block;
+       width: 100%;
+     }
+     
+     label {
+      margin-bottom: 5px;
+      color: #676767;
+      font-size: 14px;
+     }
+     
+     input {
+      padding: 10px 15px;
+      margin-bottom: 5px;
+      border: 1px solid #DDD;
+      outline: none;
+      border-radius: 0px;
+      
+      
+      &:focus {
+       border: 1px solid #00FF00;
+      }
+      
+      &.error {
+       border: 1px solid #FF0000;
+      }
+      
+      &.submit-btn {
+       width: auto;
+       appearance: none;
+       -webkit-appearance: none;
+       border: none;
+       outline: none;
+       background: none;
+       border-radius: 8px;
+       
+       background-color: #CC2D5E;
+       font-size: 18px;
+       font-weight: 700;
+       color: #FFF;
+       padding: 15px 25px;
+       cursor: pointer;
+       float: right;
+       
+       &:hover {
+        background-color: #FF5858;
+       }
+      }
+     }
+     
+     p {
+      color: #676767;
+      font-size: 12px;
+     }
+    }
+    
+    .errors {
+     position: fixed;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 1;
+     padding: 15px;
+     pointer-events: none;
+     
+     .error {
+      padding: 15px;
+      border-radius: 8px;
+      background-color: rgba(230, 20, 20, 0.8);
+      color: #FFF;
+      font-size: 14px;
+      transform: translateY(300px);
+      pointer-events: all;
+      margin-bottom: 10px;
+      
+      animation: slide-in 1s ease-out forwards;
+     }
+     
+     @keyframes slide-in {
+      to {
+       transform: translateY(0px);
+      }
+     }
+    }
+   }
